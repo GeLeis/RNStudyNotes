@@ -6,5 +6,6 @@
 npm install -g react-tools
 ```
 3.flexbox布局，是flexible box的缩写，弹性盒子布局，flex元素可以让你的布局根据浏览器的大小变化自动进行伸缩，主轴默认为水品轴
-```
 
+4.RN目前主要支持flexbox的如下6个属性
+alignItems:定义伸缩项目在交叉轴上的对齐方式
