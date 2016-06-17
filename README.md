@@ -64,3 +64,8 @@ React.render，将指定组件渲染到指定DOM节点。被ReactDOM.render替�
 * 实例化调用，React.render之后2⃣️getinitialState:初始化组件的state值，其返回值会肤质给组件的this.state属性3⃣️;componentWillMount在render之前调用此方法，业务逻辑的处理都应该放在这里，如对state的操作等；4⃣️render：根据state值，渲染并返回一个虚拟DOM5⃣️；componentDidMount该方法发生在render之后，在该方法中,reactJS会使用render方法返回的虚拟DOM对象来创建真实的DOM结构。组件内部可以通过this.getDOMNode()来获取当前组件的节点。`state:组件的属性，主要用来存储组件自身需要的数据，每次数据的更新都是通过修改state属性的值，reactJS内部会监听state属性的变化，一旦发生变化话，就会主动出发组件的render方法来更新虚拟的DOM结构。`，`虚拟DOM:将真实的DOM结构映射成一个JSON数据结构`
 * 更新阶段：6⃣️ componentWillReceiveProps该方法发生在this.props被西拐或者父组件调用setprops方法之后，调用this.setState方法来完成对state的修改7⃣️shouldComponentUpdate用来拦截新的props或者state，根据逻辑来判断是否需要更新8⃣️componentWillUpdatea将要更新9⃣️：render更新需要更新的🔟componentDidUpdate
 * 销毁阶段:componentWillunmount 通常做一些取消事件半丁，一出虚拟DOM中对应的组件数据结构，销毁一些无效的定时器工作
+
+
+14.ReactJS组件通信
+ 子组件调用伏组件this.props
+ 父组件调用子组件，先给子组件取个reft属性，this.refs.子组件ref名字.getDOMNode().style.color="red"
