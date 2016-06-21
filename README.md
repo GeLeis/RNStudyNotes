@@ -69,3 +69,9 @@ React.render，将指定组件渲染到指定DOM节点。被ReactDOM.render替�
 14.ReactJS组件通信
  子组件调用伏组件this.props
  父组件调用子组件，先给子组件取个reft属性，this.refs.子组件ref名字.getDOMNode().style.color="red"
+ 
+15.cd 到项目目录下，react-native start可以启动js服务器
+
+16.http://localhost:8081/index.ios.bundle?platform=ios&dev=true，当应用启动运行的时候，会自动拉取这个bundle文件，该文件里存放的是应用的全部逻辑代码，在目录中并不存在这个文件，事实上，这个地址只是一个请求地址，而非真正的静态资源文件，是通过包服务器packager通过动态分析index.ios.js中的依赖，并对其进行合并得到的，而且该服务器允许代码实时渲染。
+
+17.真机测试过程中出现一下错误
