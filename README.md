@@ -84,3 +84,5 @@ React.render，将指定组件渲染到指定DOM节点。被ReactDOM.render替�
 > 多个样式 style={[styles.container,styles.item]}
 
 19.[flexbox使用样例](https://github.com/shorty-Man/RNStudyNotes/blob/master/index.ios.flexBox运用.js)，使用时去掉文件命中的flexbox运用
+
+20.Navigator介绍使用，正式的开发当中使用Navigator，而NavigatorIos并不是RN官方团队所开发，只使用于IOS
