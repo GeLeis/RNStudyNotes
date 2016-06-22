@@ -74,5 +74,8 @@ React.render，将指定组件渲染到指定DOM节点。被ReactDOM.render替�
 
 16.http://localhost:8081/index.ios.bundle?platform=ios&dev=true，当应用启动运行的时候，会自动拉取这个bundle文件，该文件里存放的是应用的全部逻辑代码，在目录中并不存在这个文件，事实上，这个地址只是一个请求地址，而非真正的静态资源文件，是通过包服务器packager通过动态分析index.ios.js中的依赖，并对其进行合并得到的，而且该服务器允许代码实时渲染。
 
-17.真机测试过程中出现一下错误
-![](https://github.com/shorty-Man/RNStudyNotes/blob/master/QQ20160621-1.png)
+17.真机测试过程中出现一下错误    
+![](https://github.com/shorty-Man/RNStudyNotes/blob/master/QQ20160621-0.png)    
+在代码中的错误位置则是在index.ios.js的31行左右
+
+18
