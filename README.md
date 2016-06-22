@@ -82,3 +82,5 @@ React.render，将指定组件渲染到指定DOM节点。被ReactDOM.render替�
 > 外联样式 style={styles.container}   
 > 内联样式 style={{flex:1,borderWidth:1...}}   
 > 多个样式 style={[styles.container,styles.item]}
+
+19.[flexbox使用样例](https://github.com/shorty-Man/RNStudyNotes/blob/master/index.ios.flexBox运用.js)，使用时去掉文件命中的flexbox运用
