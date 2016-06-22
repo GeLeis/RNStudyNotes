@@ -78,4 +78,7 @@ React.render，将指定组件渲染到指定DOM节点。被ReactDOM.render替�
 ![](https://github.com/shorty-Man/RNStudyNotes/blob/master/QQ20160621-0.png)    
 在代码中的错误位置则是在index.ios.js的31行左右
 
-18
+18.felxbox水平烂布局
+> 外联样式 style={styles.container}   
+> 内联样式 style={{flex:1,borderWidth:1...}}   
+> 多个样式 style={[styles.container,styles.item]}
