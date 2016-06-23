@@ -97,3 +97,13 @@ componentDidMount{
    })
 }
 ```
+
+23.在用小米手机调试安卓app时遇到安装失败的情况下，可以直接到项目的以下目录中寻找apk直接安装:项目名/android/app/build/outputs/apk
+
+24.RN中没有像web开发给元素绑定click事件，RN提供了3个组件来赋予被点击的能力，去包裹其它组件即可，这3个组件被称为Touchable类组件。
+* TouchableHighlight 高亮   
+   属性：activeOpacity（设置透明度）,onHideUnderlay（隐藏阴影背景效果）,onShowUnderlay(显示阴影背景效果),underlayColor（点击背景阴影效果的背景颜色）;
+* TouchableOpacity 透明度   
+   属性：activeOpacity，点击时有透明度变化
+* TouchableWithoutFeedback 无反馈 不会出现任何视觉变化
+   不建议使用；属性：onLongPress(长安回调),onPressIn(按下),onPressout(弹开)
