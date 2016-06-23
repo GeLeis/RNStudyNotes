@@ -107,3 +107,6 @@ componentDidMount{
    属性：activeOpacity，点击时有透明度变化
 * TouchableWithoutFeedback 无反馈 不会出现任何视觉变化
    不建议使用；属性：onLongPress(长安回调),onPressIn(按下),onPressout(弹开)
+
+
+25.[使用拨打电话功能](http://bbs.reactnative.cn/topic/658/react-native下如何拨打电话/2)
