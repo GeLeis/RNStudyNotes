@@ -86,3 +86,14 @@ React.render，将指定组件渲染到指定DOM节点。被ReactDOM.render替�
 19.[flexbox使用样例](https://github.com/shorty-Man/RNStudyNotes/blob/master/index.ios.flexBox运用.js)，使用时去掉文件命中的flexbox运用
 
 20.Navigator介绍使用，正式的开发当中使用Navigator，而NavigatorIos并不是RN官方团队所开发，只使用于IOS
+
+21.使用数组时出现warning key警告，在使用数组的地方加上key={i}就好
+
+22.参数传递：在push时把route.params里的每个key作为props的一个属性，{...route.params},在
+```js
+componentDidMount{
+   this.setState({
+      id:this.props.id//获取传递过来的参数
+   })
+}
+```
