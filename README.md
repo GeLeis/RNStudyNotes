@@ -120,3 +120,7 @@ componentDidMount{
 * 加载本地图片时，require里面的资源文件路径必须时静态的字符串，不能是表达式这种动态的结果
 * 如果编写RN和原生的混合app，可以使用已经打包到app中的图片资源,比如xcode中的asset或者android中的drawable文件夹，同时使用时必须指明图片的大小<Image source={{uri:'app_icon'}} style={{width:40,height:40}}>,直接写图片名字即可
 * 网络图片需要手动指定图片的尺寸
+
+27.progressBar的使用：在android和ios平台上不同，android为progressBarAndroid ，ios平台上为progressViewIOS 
+
+28.在安卓平台上独有的DrawerLayoutAndroid，抽屉效果的控件，ViewPagerAndroid分页效果的控件
