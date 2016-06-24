@@ -8,12 +8,12 @@ npm install -g react-tools
 3.flexbox布局，是flexible box的缩写，弹性盒子布局，flex元素可以让你的布局根据浏览器的大小变化自动进行伸缩，主轴默认为水品轴
 
 4.RN目前主要支持flexbox的如下6个属性
-* alignItems:定义伸缩项目在交叉轴上的对齐方式，（flex-start,flex-end,center,stretch）
+* alignItems:定义伸缩项目在交叉轴上的对齐方式，（flex-start,flex-end,center,stretch）,对子控件在交叉轴方向排列方式的约束
 * alignSelf:用来定义单独的伸缩项目在交叉轴上的对齐方式auto|flex-start|flex-end|center|stretch
 * flex，是flex-grow(放大),flex-shrink(缩小),flex-basis(基准)三个属性的缩写，默认值为0 1 auto
 * flexDirection:主轴方向row|row-reverse|column|column-reverse
 * flexWrap:伸缩容器在主轴空间不足的情况下，是否换行nowrap|wrap|wrap-reverse
-* justContent：伸缩项目在主轴线的对齐方式,flex-start|flex-end|center|space-between|space-around
+* justContent：伸缩项目在主轴线的对齐方式,flex-start|flex-end|center|space-between|space-around，对自控件在主轴方向的排列约束
 
 5.JSX入门，并不是一门新的语言，只是语法糖，允许开发者在javascript中书写HTML语法，最后每个html标签都转换成js代码
 html标签转换成js
@@ -110,3 +110,13 @@ componentDidMount{
 
 
 25.[使用拨打电话功能](http://bbs.reactnative.cn/topic/658/react-native下如何拨打电话/2)
+
+
+26.Image组件的使用，属性：
+* resizeMode:cover,contain(按照图片的大小自适应的缩放),stretch,
+* source:图拍的引用地址,网络图片:source={{uri:'http://....png'}},本地图片source={require('./baidu.png')}
+静态图片资源:如果添加图片的时候,packager正在运行，则需要重启packager一边引入新的添加的图片，因为packager打包的图片在程序启动时就已经完成。现在的RN版本已修复这个bug  
+* 本地的图片资源直接放在项目目录下，
+* 加载本地图片时，require里面的资源文件路径必须时静态的字符串，不能是表达式这种动态的结果
+* 如果编写RN和原生的混合app，可以使用已经打包到app中的图片资源,比如xcode中的asset或者android中的drawable文件夹，同时使用时必须指明图片的大小<Image source={{uri:'app_icon'}} style={{width:40,height:40}}>,直接写图片名字即可
+* 网络图片需要手动指定图片的尺寸
