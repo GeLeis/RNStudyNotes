@@ -124,3 +124,5 @@ componentDidMount{
 27.progressBar的使用：在android和ios平台上不同，android为progressBarAndroid ，ios平台上为progressViewIOS 
 
 28.在安卓平台上独有的DrawerLayoutAndroid，抽屉效果的控件，ViewPagerAndroid分页效果的控件
+
+29.反向传值通过在组件属性里赋值一个回调方法,参考,project01
