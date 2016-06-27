@@ -129,3 +129,11 @@ componentDidMount{
 
 30.防异步网络请求:   
 * RN的网路的请求:XMLHttpRequest Fetch post get 
+
+31.RN中的版本管理   
+~会匹配最新的子版本（中间那个数字），比如~1.2.3会匹配所有的1.2.x版本，但不匹配到1.3.0及以上   
+^会匹配最新的主版本（第一个数字），比如^1.2.3将会匹配所有的1.x.x版本，2.0.0就缓缓飘过了。
+
+32.[React Native的常见问题](http://bbs.reactnative.cn/topic/130/新手提问前先来这里看看-react-native的常见问题) 
+
+33.
