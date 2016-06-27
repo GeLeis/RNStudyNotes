@@ -136,4 +136,4 @@ componentDidMount{
 
 32.[React Native的常见问题](http://bbs.reactnative.cn/topic/130/新手提问前先来这里看看-react-native的常见问题) 
 
-33.
+33.如果项目没有node_modules目录，那么可以cd到项目目录下，npm install react-native安装
