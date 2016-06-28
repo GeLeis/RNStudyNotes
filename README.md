@@ -139,3 +139,5 @@ componentDidMount{
 33.如果项目没有node_modules目录，那么可以cd到项目目录下，npm install react-native安装
 
 34.npm info react-native查询当前RN版本库信息，对应的disk-tags(信息最上面靠近几条中),然后更给项目目录下的package.json文件中的RN版本为当前最新版本。
+
+35.[RN图片轮轮播器](https://github.com/leecade/react-native-swiper)
