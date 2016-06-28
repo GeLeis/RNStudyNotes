@@ -140,4 +140,11 @@ componentDidMount{
 
 34.npm info react-native查询当前RN版本库信息，对应的disk-tags(信息最上面靠近几条中),然后更给项目目录下的package.json文件中的RN版本为当前最新版本。
 
-35.[RN图片轮轮播器](https://github.com/leecade/react-native-swiper)
+35.[RN图片轮轮播器](https://github.com/leecade/react-native-swiper),使用安装:   
+```
+安装模块  npm i react-native-swiper --save    i表示安装，save保存到node-modules文件夹下，并添加package.json依赖
+查看模块  npm view react-native-swiper
+删除模块  npm rm react-native-swiper --save
+查看帮助命令   npm help 
+
+```
