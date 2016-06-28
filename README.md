@@ -148,3 +148,4 @@ componentDidMount{
 查看帮助命令   npm help 
 如果想改变swiper的大小，需要修改属性的width height，不要修改style
 ```
+36.webView的使用,javaScripteEnabled在android和ios平台都是默认开启的，通过injectedJavaScript逐日一段js代码，如果加上了该属性，就会在webView里面执行这段js代码，并且是在网页加载之前
