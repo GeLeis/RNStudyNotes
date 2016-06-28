@@ -146,5 +146,5 @@ componentDidMount{
 查看模块  npm view react-native-swiper
 删除模块  npm rm react-native-swiper --save
 查看帮助命令   npm help 
-
+如果想改变swiper的大小，需要修改属性的width height，不要修改style
 ```
