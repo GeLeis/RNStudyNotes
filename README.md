@@ -163,3 +163,7 @@ componentDidMount{
 2.多列(grid效果)
 ListView并没有强制要求一个rowData在展示时一定要占满一行，在多列的情况下，我们适时调整每个rowData占据的宽度即可,将flex设为row，将flexwrap设置为wrap，样式设置给listView的contentContainerStyle
 ```
+
+40.RN开源组件之react-native-tab-navigator,好处:宽平台，纯js,支持android与ios
+
+41.RN开源组件之react-native-side-menu,类似qq的侧边栏组件
