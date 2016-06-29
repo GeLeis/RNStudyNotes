@@ -152,3 +152,14 @@ componentDidMount{
 
 
 37.[IDE工具 VS Code](https://code.visualstudio.com/Docs/?dv=osx)
+
+38.ListView的使用，使用默认是数据源有三个维度；第一个维度是sectionId，标示属于那一段，可以手动指定或隐式的使用数组索引或对象的key值，第二个维度是rowId，表示某个数据段下的某一行，同样可以手动指定或者隐式的使用数组的索引或对象的key值；第三个维度是具体的数据对象，根据实际的需要耳钉。rowid默认从0开始，sectionId则是s1开始，代表第一组，
+
+39.ListView的高级特性
+```
+1.分页   
+数据一次性拿到，边滚动边加载／或者不是一次性拿到，而是分屏取数据。对于第一种情况，在ListView内部已经做了分页处理，listView内部通过curRenderRowsCount状态保存已渲染的行数;初始状态下，要加载的数据调试等于initialListSize(默认10条)，在滚动时检测当前滚动的位置和最底部的距离，如果小雨scrollrenderAheadistance(默认1000)，就更新curRenderedRowsCount，在原有值基础上加pageSize个（默认为1条）；对于第二种情况，ListView提供了相关属性；onEndReachedThreshold，在滚动即将达到底部时触发，onEndReached，在已经到达底部时触发
+
+2.多列(grid效果)
+ListView并没有强制要求一个rowData在展示时一定要占满一行，在多列的情况下，我们适时调整每个rowData占据的宽度即可,将flex设为row，将flexwrap设置为wrap，样式设置给listView的contentContainerStyle
+```
