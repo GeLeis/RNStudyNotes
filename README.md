@@ -13,7 +13,7 @@ npm install -g react-tools
 * flex，是flex-grow(放大),flex-shrink(缩小),flex-basis(基准)三个属性的缩写，默认值为0 1 auto
 * flexDirection:主轴方向row|row-reverse|column|column-reverse
 * flexWrap:伸缩容器在主轴空间不足的情况下，是否换行nowrap|wrap|wrap-reverse
-* justContent：伸缩项目在主轴线的对齐方式,flex-start|flex-end|center|space-between|space-around，对自控件在主轴方向的排列约束
+* justContent：伸缩项目在主轴线的对齐方式,flex-start|flex-end|center|space-between|space-around，对自控件在主轴方向的排列约束,约束开始位置，start表示控件排列居左对齐，center表示控件排列居中
 
 5.JSX入门，并不是一门新的语言，只是语法糖，允许开发者在javascript中书写HTML语法，最后每个html标签都转换成js代码
 html标签转换成js
