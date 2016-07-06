@@ -176,3 +176,11 @@ ListView并没有强制要求一个rowData在展示时一定要占满一行，�
 44.var,let,const的区别，var和let都是声明变量，不同的是var声明的变量可以在任意位置并且可以在声明位置之前使用，let声明的变量为代码块变量，如果都是在函数或文件顶层声明变量，那么两者没有区别。const用于声明常量
 
 45.RN中定义的方法如果有n个参数，那么调用时可以传递的参数个数<=n就可以了
+
+46.调试输出:console.log();   
+android 5.0及以上不用设置ip和端口，开启usb调试，使用adb reverse命令，运行adb reverse tcp:8081 tcp:8081,就可以使用reload JS和其它选项    
+摇晃设备，或者运行adb shell input keyevent 82 可以打开开发者菜单    
+在ios模拟器上，通过点击模拟器上的shake gesture，打开remote js debugger，如果网页显示debugger session active，那么js调试远程连接成功.按option + command +j开大开发者菜单，在console里可以通过console.log()，输出想要查看的值，前提是在断点调试的情况下.
+
+47.API学习   
+* APPRegistry是运行所有的RN应用的入口，应用的跟组建应当通过APPRegistry.registerComponent方法注册自己，当注册完成之后才可以加载应用的bundle包并且触发APPRegistry.runApplication来真正运行应用。
