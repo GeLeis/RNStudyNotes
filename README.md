@@ -184,7 +184,7 @@ android 5.0及以上不用设置ip和端口，开启usb调试，使用adb revers
 
 47.API学习   
 * APPRegistry是运行所有的RN应用的入口，应用的跟组建应当通过APPRegistry.registerComponent方法注册自己，当注册完成之后才可以加载应用的bundle包并且触发APPRegistry.runApplication来真正运行应用。
-* AsyncStorage是一个简单的，具有异步特性的键值对的存储系统，类似于ios的NSUserDefault，保存在沙盒中的Documents/RCTAsyncLocalStorage_V1/manifest.json。用法如下   
+* AsyncStorage是一个简单的，具有异步特性的键值对的存储系统，类似于ios的NSUserDefault，保存在沙盒中的Documents/RCTAsyncLocalStorage_V1/manifest.json，另外取AsyncStorage储存的数据只能在didMount及以后取。用法如下   
 ```js
 import { AsyncStorage } from 'react-native';
 
@@ -213,3 +213,22 @@ let UserDefaults = {
 
 export default UserDefaults;
 ```
+
+48.自定义组件声明必须要的属性,
+```js
+static propTypes = {
+   url:React.PropTypes.string.isRequired,
+   title:React.PropTypes.string.isRequired,
+};
+```   
+声明属性默认值
+```js
+static defaultProps = {
+   url:'https://******',
+   title:'默认',
+};
+```
+
+49.js里==与===的差别,前者不判断类型，后者包括类型和值
+
+50.
