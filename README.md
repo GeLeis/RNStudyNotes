@@ -171,4 +171,4 @@ ListView并没有强制要求一个rowData在展示时一定要占满一行，�
 42.[windows下虚拟机装macOS](http://jingyan.baidu.com/article/d621e8da27fe7c2865913fde.html)
 
 
-43.定义枚举，并引用，参考iShiWuPai里面的actionTypes
+43.定义枚举，并引用，参考[iShiWuPai里面的actionTypes](https://github.com/shorty-Man/react-native-iShiWuPai)
