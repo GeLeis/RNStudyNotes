@@ -172,3 +172,5 @@ ListView并没有强制要求一个rowData在展示时一定要占满一行，�
 
 
 43.定义枚举，并引用，参考[iShiWuPai里面的actionTypes](https://github.com/shorty-Man/react-native-iShiWuPai)
+
+44.var,let,const的区别，var和let都是声明变量，不同的是var声明的变量可以在任意位置并且可以在声明位置之前使用，let声明的变量为代码块变量，如果都是在函数或文件顶层声明变量，那么两者没有区别。const用于声明常量
