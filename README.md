@@ -252,3 +252,60 @@ this.props.navigator.push({
 在navigator的页面，可以通过this.props.feed获取值
 
 52.AlertIOS的应用
+```js
+AlertIOS.alert('提示','提示内容',[
+   {
+      text:'取消',
+      onPress:()=>{
+         alert('点击了取消按钮');
+      },
+   },
+   {
+      text:'中间',
+      onPress:()=>{
+         alert('点击了中间按钮');
+      },
+   },
+   {
+      text:'确定',
+      onPress:()=>{
+         alert('点击了确定按钮');
+      },
+   },
+]);
+```
+当按钮个数大于两个时，按钮会垂直往下排列，当一个按钮也不赋值的时候，会有个默认的ok按钮   
+AlertIOS.prompt();弹出带输入框的提示框
+
+53.nuclide代码自动补全提示的插件，atom-react-native-css    atom-react-native-autocomplete   nuclide自动保存代码的插件,autosave设置setting enable   
+
+54.ActionSheetIOS的应用，
+```js
+ActionSheetIOS.showActionsheetWithOptions(
+   {
+      options:['电话','邮件','短信','取消'],
+      cancleButtonIndex:3,//取消按钮是第几个
+      destructiveButtonIndex:0,//红色警告按钮
+      title:'标题',
+      message:'内容',
+   },
+   fuction(index){//回调
+      alert(index);
+   }
+);
+```
+
+```js
+ActionSheetIOS.showShareActionSheetWithOptions(
+   {
+      message:'标题',
+      url:'http://',
+   },
+   function(failure){
+      //失败回调 
+   },
+   function(success){
+      //成功回调
+   },
+);
+```
