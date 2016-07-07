@@ -247,3 +247,8 @@ this.props.navigator.push({
                 }
             })
 ```
+在push时，在这里的passProps传递参数或者回调，
+
+在navigator的页面，可以通过this.props.feed获取值
+
+52.AlertIOS的应用
