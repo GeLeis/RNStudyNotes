@@ -231,4 +231,19 @@ static defaultProps = {
 
 49.js里==与===的差别,前者不判断类型，后者包括类型和值
 
-50.
+50.解决navigator页面返回后，之前的页面不更新问题,在push是，传递一个回调方法过去，用于更新本页面
+
+51.Navigator的renderScene里
+```js
+<Component navigator = {navigator} route = {route} {...route.passProps} />
+```   
+passProps为传递过去的参数
+```js
+this.props.navigator.push({
+                name: 'FeedDetail',
+                component: FeedDetail,
+                passProps: {
+                    feed: feedItem,
+                }
+            })
+```
