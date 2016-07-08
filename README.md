@@ -403,3 +403,110 @@ fetch(url,map).then(
 );
 ```
 
+57.cameralRoll的使用：该模块提供了对手机中保存的图片的／视频文件进行遍历访问与操作，提供两个静态方法   
+方法1⃣️：getPhotos(params:object),params有四个成员变量   
+* first：数值，希望获取多少张图片的信息
+* groupTypes 字符串，默认为SavedPhotos[Album All Event Faces Library PhotoStream],仅支持ios平台，用来指定获取图片或视频的类型
+* assetType 字符串 默认为photos 表示只获取图片[All Videos]
+返回一个带有图片表示服JSON对象的promise
+* after 字符串 用来记录上一次获取图片的结束标志，方便可以接着上次的位置继续获取,这个可以在data.page_info里面找到,end_cursor:结束位置，has_next_page:后面是否还有图片
+返回的数据类型结构
+```js
+   //IOS
+   data:{
+      edges:[
+      {
+         node:{
+            group_name:'camera Roll',
+            image:{
+               height:430,
+               isStored:true,
+               uri:"assets-library://asset/asset.jpg?id=*******",
+               width:430,
+               _photo_:{},
+            },
+            location:{},
+            timestemp:146564345,
+            type:'ALAssetTypePhoto',
+            _photo_:{},
+         },
+         _photo_:{}
+      },
+      ...],
+      page_info:{
+         end_cursor:'assets-library://asset/asset.jpg?id=*******',
+         has_nex_page:true,
+         start_cursor:'assets-library://asset/asset.jpg?id=*******',
+         _proto:{}
+      },
+      _proto_:{
+         ***
+      }
+      
+   }
+   
+   //Android
+   data:{
+      edges:[
+      {
+         node:{
+            group_name:'Screenshots',//分组类型
+            image:{
+               height:430,
+               uri:"assets-library://asset/asset.jpg?id=*******",
+               width:430,
+               _photo_:{},
+            },
+            timestemp:146564345,
+            type:'image/png',
+            _photo_:{},
+         },
+         _photo_:{}
+      },
+      ...],
+      page_info:{
+         end_cursor:'assets-library://asset/asset.jpg?id=*******',
+         has_nex_page:true,
+         _proto:{}
+      },
+      _proto_:{
+         ***
+      }
+      
+   }
+```
+得到的imge对象，可以作为整体传递给image组件，用来显示图片   
+
+需要注意的是在IOS平台中，需要添加链接库，    
+* 将/node_modules/react-nati e/libraires/Cameraroll下的RCTCameraRoll.xcodeproj拖动到当前xcode项目的Libraries目录，  
+* 选中当前项目，build phases ->link binary With libraris
+* 打开第一次插入的RCTCameraroll.xcodeproj，在打开它的子目录products，将子目录下的libRCTCameraRoll.a文件拖到该列表中,
+* 重新编译项目
+
+方法2⃣️：saveImageWithTag(tag)保存一个图片到相册
+tag在安卓上，本参数是一个本地uri，是把本地的图片保存到相册中，例如file:///sdcard/img.png  
+在ios设备上可能是：1.本地uri，2.资源库的标签，3.非以上两种类型，表示图片数据将会存储在内存中(并且在本进程持续的时候一直会占用内存),操作成功时返回一个promise,（一个新的uri）
+
+58.遍历数组，并赋值给组件是，需要指定组件的key属性
+
+59.数组的unshift方法可以想数组的开头添加一个或更多元素
+```
+   images.unshift{
+      {
+         uri:url,
+      }
+   };
+```
+
+60.开源组件之react-native-camera,调用摄像机
+
+61.ref的两种属性，string属性，回调属性，这个回调在组件render之后，在DidMount之前
+```js
+<Camera
+   ref={(cam) => {
+      this.camera = cam;
+    }}//相当于用this.camera对这个组件的引用
+   style={styles.preview}
+   aspect={Camera.constants.Aspect.fill}>
+</Camera>
+```
