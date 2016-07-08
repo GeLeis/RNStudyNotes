@@ -309,3 +309,97 @@ ActionSheetIOS.showShareActionSheetWithOptions(
    },
 );
 ```
+
+55.网络状态的监听:   
+需要import进NetInfo,在constructor里添加一个属性，connectionInfo:null;在componentDidMount里面添加监听
+```js
+componentDidMount(){
+   //网络是否连接的监听
+   NetInfo.isConnected.addEventListener(
+      'isConnected',this._handleConnectivityChange
+   );
+   
+   //网络状态变化的监听
+   NetInfo.addEventListener(
+      'statusChange',this._handleNetStatusChange
+   );
+   
+   //检测网络是否连接
+   NetInfo.isConnected.fetch().done(
+      (isConnected)=>{this.setState({
+         isConnected:isConnected,
+      })}
+   );
+   
+   //检测网络连接状态
+   NetInfo.fecch().done(
+      (connectionInfo)=>{this.setState({
+         connectionInfo:connectioninfo,
+      })}
+   );
+}
+```
+
+然后在卸载监听
+```js
+componentWillUnmount(){
+   NetInfo.isConnected.removeEventListener(
+      'isConnected',this._handlerConnectivityChange
+   );
+   
+   NetInfo.removeEvenetListener(
+      'statusChange',
+      'statusChange',this._handleNetStatusChange
+   );
+}
+```
+监听的回调
+```js
+_handlerConnectivityChange=(isConnected)=>{
+   
+};
+
+_handleNetStatusChange=(connectionInfo)=>{
+
+};
+```
+
+56.网络请求   
+fetch是一个网络API，有两种用法来使用   
+* 使用hten 和catch指定回调函数
+* 使用ES7的anync/await语法来发起一个异步调用
+
+使用方法   
+```js
+//fetch默认的是get方法，
+//使用方法1.
+fetch('https://mywebsite.com/mydata.json');
+
+//使用方法2.
+let map = {method:'POST,'};
+map.body=JSON.stringfy(
+   'username':'3131313',
+   'password':'111'
+);
+map.headers={
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+  };
+map.follow = 10;//设置请求允许的最大重定向次数，0为不允许重定向
+map.timeout=8000;//单位ms，设置超时时长，0为没有超时时间，这个值在重定向后会被重置
+map.size=0;//设置请求回应中的消息最大允许长度，0为没有限制
+
+fetch(url,map).then(
+(response)=>response.text;
+).then(
+   (responseText)=>{
+   //如果需要输出，通过alert,console出不来，bug
+      return JSON.parse(responseText); 
+   }
+).catch(
+   (err)=>{
+      console.log('错误'+err);
+   }
+);
+```
+
