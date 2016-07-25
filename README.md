@@ -514,3 +514,5 @@ tag在安卓上，本参数是一个本地uri，是把本地的图片保存到�
 62.[定时器，时间获取，手机定位](http://www.reactnative.vip/forum.php?mod=viewthread&tid=180&highlight=47)
 
 63.[项目ui框架搭建](https://github.com/shorty-Man/react-native-router-flux)
+
+64.[react-native-image-picker照片选择器](https://github.com/marcshilling/react-native-image-picker)
