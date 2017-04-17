@@ -520,3 +520,5 @@ tag在安卓上，本参数是一个本地uri，是把本地的图片保存到�
 65.RN项目，js文件挂在服务器上，如果js文件没有变动，启动app时不会重新从服务器loading文件，如果js有更新，那么才会对js进行loading
 
 66.[react-native-swipeout类似tableViewCell左划出现删除等按钮](https://github.com/dancormier/react-native-swipeout)
+
+67.[react-navigator](https://reactnavigation.org/docs/navigators/tab)
