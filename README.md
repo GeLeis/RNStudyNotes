@@ -544,3 +544,5 @@ tag在安卓上，本参数是一个本地uri，是把本地的图片保存到�
 77.[多张图片浏览](https://github.com/ascoders/react-native-image-viewer)
 
 78.[单张图片浏览](https://github.com/oblador/react-native-lightbox)
+
+79.[loading通用](https://github.com/wenxucheng/react-native-loading-w)
